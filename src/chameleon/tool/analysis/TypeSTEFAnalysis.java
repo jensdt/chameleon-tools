@@ -1,4 +1,4 @@
-package chameleon.analysis;
+package chameleon.tool.analysis;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -12,7 +12,7 @@ import org.rejuse.predicate.PrimitiveTotalPredicate;
 import chameleon.core.type.Type;
 
 /**
- * @author marko
+ * @author Marko van Dooren
  */
 public class TypeSTEFAnalysis {
   

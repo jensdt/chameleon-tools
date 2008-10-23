@@ -1,4 +1,4 @@
-package chameleon.analysis;
+package chameleon.tool.analysis;
 
 import org.rejuse.graph.Graph;
 
