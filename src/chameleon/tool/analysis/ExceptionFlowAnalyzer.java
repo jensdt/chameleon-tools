@@ -1,4 +1,4 @@
-package chameleon.analysis;
+package chameleon.tool.analysis;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,7 +12,6 @@ import org.rejuse.graph.Graph;
 import org.rejuse.graph.Node;
 import org.rejuse.graph.UniEdgeFactory;
 
-import sun.tools.tree.ThrowStatement;
 import chameleon.core.MetamodelException;
 import chameleon.core.expression.Expression;
 import chameleon.core.expression.Invocation;
@@ -27,6 +26,8 @@ import chameleon.core.statement.ExceptionSource;
 import chameleon.core.type.Type;
 import chameleon.core.variable.FormalParameter;
 import chameleon.core.variable.Variable;
+import chameleon.support.statement.CatchClause;
+import chameleon.support.statement.ThrowStatement;
 
 /**
  * @author marko
@@ -269,7 +270,7 @@ private boolean propagatedThrows(ExceptionPair pair) throws MetamodelException {
   Expression expr = t.getExpression();
   if (expr instanceof VariableReference) {
     Variable v = ((VariableReference)expr).getVariable();
-    if((v instanceof FormalParameter) &&(v.getParent() instanceof CatchClause)) {
+    if((v instanceof FormalParameter) &&(v.parent() instanceof CatchClause)) {
       return true;
     }
   }
