@@ -7,7 +7,7 @@ import java.util.Set;
 
 import org.rejuse.java.collections.IntegerAccumulator;
 import org.rejuse.java.collections.Visitor;
-import org.rejuse.predicate.PrimitiveTotalPredicate;
+import org.rejuse.predicate.SafePredicate;
 
 import chameleon.core.type.Type;
 
@@ -95,7 +95,7 @@ public class TypeSTEFAnalysis {
   }
   
   public int getNbHeaders(final Type type) {
-    return new PrimitiveTotalPredicate() {
+    return new SafePredicate() {
       public boolean eval(Object o) {
         return ((MethodSTEFAnalysis)o).getHeaderAnalysis(type) != null;
       }
@@ -115,7 +115,7 @@ public class TypeSTEFAnalysis {
   }
   
   public int getNbThrows(final Type type) {
-    return new PrimitiveTotalPredicate() {
+    return new SafePredicate() {
       public boolean eval(Object o) {
         return ((MethodSTEFAnalysis)o).getThrowAnalysis(type) != null;
       }
@@ -124,7 +124,7 @@ public class TypeSTEFAnalysis {
   
   public Set getThrowingMethods() {
     Set result = new HashSet(getMethodAnalyses());
-    new PrimitiveTotalPredicate() {
+    new SafePredicate() {
       public boolean eval(Object o) {
         return ((MethodSTEFAnalysis)o).hasDirectThrow();
       }
