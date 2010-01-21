@@ -11,10 +11,10 @@ import java.util.Set;
 import org.rejuse.java.collections.TransitiveClosure;
 
 import chameleon.core.declaration.Declaration;
-import chameleon.core.element.ChameleonProgrammerException;
 import chameleon.core.element.Element;
 import chameleon.core.lookup.LookupException;
 import chameleon.core.reference.CrossReference;
+import chameleon.exception.ChameleonProgrammerException;
 import chameleon.input.ModelFactory;
 import chameleon.input.ParseException;
 import chameleon.support.tool.ArgumentParser;
