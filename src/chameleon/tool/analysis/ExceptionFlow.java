@@ -3,7 +3,7 @@ package chameleon.tool.analysis;
 import org.rejuse.graph.Graph;
 
 import chameleon.core.method.Method;
-import chameleon.core.type.Type;
+import chameleon.oo.type.Type;
 
 /**
  * A class of objects representating the static flow of exceptions through a program.

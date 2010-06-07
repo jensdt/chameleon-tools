@@ -9,7 +9,7 @@ import org.rejuse.java.collections.IntegerAccumulator;
 import org.rejuse.java.collections.Visitor;
 import org.rejuse.predicate.SafePredicate;
 
-import chameleon.core.type.Type;
+import chameleon.oo.type.Type;
 
 /**
  * @author Marko van Dooren

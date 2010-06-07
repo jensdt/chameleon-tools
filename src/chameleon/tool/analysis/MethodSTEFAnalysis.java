@@ -9,7 +9,7 @@ import java.util.Set;
 
 import org.rejuse.java.collections.Visitor;
 
-import chameleon.core.type.Type;
+import chameleon.oo.type.Type;
 
 /**
  * @author Marko van Dooren
