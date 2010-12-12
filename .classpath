@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry excluding="chameleon/tool/analysis/ExceptionFlowAnalyzer.java" kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Chameleon"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/rejuse"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Chameleon Support"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/chameleon"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/chameleon-support"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
