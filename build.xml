@@ -7,6 +7,7 @@
 <project basedir="." default="build" name="Chameleon Tools">
     <property environment="env"/>
     <property name="Chameleon.location" value="../chameleon"/>
+    <property name="Jnome.location" value="../jnome"/>
     <property name="rejuse.location" value="../rejuse"/>
     <property name="Chameleon Support.location" value="../chameleon-support"/>
     <property name="debuglevel" value="source,lines,vars"/>
@@ -68,5 +69,9 @@
             <exclude name="chameleon/tool/analysis/ExceptionFlowAnalyzer.java"/>
             <classpath refid="Chameleon Tools.classpath"/>
         </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects">
+        <ant antfile="build.xml" dir="${Jnome.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.xml" dir="${Jnome.location}" inheritAll="false" target="build"/>
     </target>
 </project>
