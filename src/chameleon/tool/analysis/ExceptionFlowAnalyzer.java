@@ -12,20 +12,18 @@ import org.rejuse.graph.Graph;
 import org.rejuse.graph.Node;
 import org.rejuse.graph.UniEdgeFactory;
 
-import chameleon.core.MetamodelException;
 import chameleon.core.expression.Expression;
-import chameleon.core.expression.Invocation;
 import chameleon.core.expression.VariableReference;
 import chameleon.core.member.Member;
 import chameleon.core.method.Method;
+import chameleon.core.method.exception.AnchoredExceptionDeclaration;
 import chameleon.core.method.exception.ExceptionDeclaration;
 import chameleon.core.method.exception.TypeExceptionDeclaration;
 import chameleon.core.statement.Block;
-import chameleon.core.statement.ExceptionPair;
 import chameleon.core.statement.ExceptionSource;
-import chameleon.core.type.Type;
 import chameleon.core.variable.FormalParameter;
 import chameleon.core.variable.Variable;
+import chameleon.oo.type.Type;
 import chameleon.support.statement.CatchClause;
 import chameleon.support.statement.ThrowStatement;
 
