@@ -1,8 +1,5 @@
 package chameleon.tool.analysis;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -15,10 +12,6 @@ import chameleon.core.element.Element;
 import chameleon.core.lookup.LookupException;
 import chameleon.core.reference.CrossReference;
 import chameleon.exception.ChameleonProgrammerException;
-import chameleon.input.ModelFactory;
-import chameleon.input.ParseException;
-import chameleon.support.tool.ArgumentParser;
-import chameleon.support.tool.Arguments;
 
 public class DependencyAnalyzer {
 
@@ -61,7 +54,7 @@ public class DependencyAnalyzer {
   
   public <T extends Element> Set<T> nearestAncestors(Collection<? extends Element> elements, Class<T> kind) {
   	Set<T> result = new HashSet<T>();
-  	for(Element<?,?> element: elements) {
+  	for(Element<?> element: elements) {
   		result.add(element.nearestAncestor(kind));
   	}
   	return result;
